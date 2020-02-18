@@ -23,9 +23,9 @@ function fetchData1 () {
   
     for(let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Increase: ${objPayload[8]}`) 
+        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock up by: +${Math.floor(objPayload[8] * 100) / 100}%`) 
       } else {
-        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Decrease: ${objPayload[8]}`) 
+        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock down by: ${Math.floor(objPayload[8] * 100) / 100}%`) 
       }
     }
   }).catch(error => {
@@ -45,9 +45,9 @@ function fetchData2() {
 
     for (let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Increase: ${objPayload[8]}`)
+        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `MSFT Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock up by: +${Math.floor(objPayload[8] * 100) / 100}%`)
       } else {
-        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Decrease: ${objPayload[8]}`)
+        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `MSFT Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock down by: ${Math.floor(objPayload[8] * 100) / 100}%`)
       }
     }
   }).catch(error => {
@@ -68,9 +68,9 @@ function fetchData3() {
 
     for (let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Increase: ${objPayload[8]}`)
+        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `BTCUSD Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock up by: +${Math.floor(objPayload[8] * 100) / 100}%`)
       } else {
-        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `Price: ${objPayload[4]} <br> Decrease: ${objPayload[8]}`)
+        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `BTCUSD Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock down by: ${Math.floor(objPayload[8] * 100) / 100}%`)
       }
     }
   }).catch(error => {
