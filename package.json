@@ -2,10 +2,10 @@
   "name": "front-end-development-challenge",
   "version": "1.0.0",
   "description": "Welcome to the Wise Publishing Front End Developer Challenge!",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack src/js/app.js dist/bundle.js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/avijitchoudhury/front-end-development-challenge#readme",
   "devDependencies": {
+    "nodemon": "^2.0.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "request": "^2.88.2"
   }
 }
