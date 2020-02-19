@@ -23,7 +23,7 @@ function fetchData1 () {
   
     for(let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock up by: +${Math.floor(objPayload[8] * 100) / 100}%`) 
+        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGLeeeeee Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock up by: +${Math.floor(objPayload[8] * 100) / 100}%`) 
       } else {
         return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL Current Price: ${Math.floor(objPayload[4] * 100) / 100} Stock down by: ${Math.floor(objPayload[8] * 100) / 100}%`) 
       }
