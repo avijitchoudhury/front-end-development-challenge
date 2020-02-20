@@ -1,2 +1,29 @@
 body {
-  background-color: white; }
+  margin: 0; }
+
+.header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 100;
+  height: 6rem;
+  font-size: 1.2rem;
+  background-color: #dcc6e0;
+  box-shadow: 0 2px 2px 2px lightgray; }
+  .header__logo-box {
+    display: flex;
+    margin-left: 5%; }
+  .header-primary {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center; }
+    .header-primary__main {
+      text-align: center;
+      padding: 1.5rem; }
+      .header-primary__main-increase {
+        color: green; }
+      .header-primary__main-decrease {
+        color: red; }

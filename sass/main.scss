@@ -2,5 +2,44 @@ $color-black: black;
 $color-white: white;
 
 body {
-  background-color: $color-white;
+  margin: 0;
 }
+
+
+.header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 100;
+  height: 6rem;
+  font-size: 1.2rem;
+  background-color: rgba(220, 198, 224, 1);
+  box-shadow: 0 2px 2px 2px lightgray;
+
+  &__logo-box {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  &-primary {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &__main {
+      text-align: center;
+      padding: 1.5rem;
+
+      &-increase {
+        color: green;
+      }
+      &-decrease {
+        color: red;
+      }
+    }
+  }
+}
+
