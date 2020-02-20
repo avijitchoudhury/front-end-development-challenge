@@ -23,9 +23,9 @@ function fetchData1 () {
   
     for(let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL <br> $${Math.floor(objPayload[4] * 100) / 100}  <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`) 
+        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `<span class="stock-title">GOOGL</span> <br> $${Math.floor(objPayload[4] * 100) / 100}  <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`) 
       } else {
-        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `GOOGL <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`) 
+        return document.querySelector('#app1').insertAdjacentHTML("afterbegin", `<span class="stock-title">GOOGL</span> <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`) 
       }
     }
   }).catch(error => {
@@ -45,9 +45,9 @@ function fetchData2() {
 
     for (let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `MSFT <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`)
+        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `<span class="stock-title">MSFT</span> <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`)
       } else {
-        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `MSFT <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`)
+        return document.querySelector('#app2').insertAdjacentHTML("afterbegin", `<span class="stock-title">MSFT</span> <br> $${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`)
       }
     }
   }).catch(error => {
@@ -68,15 +68,16 @@ function fetchData3() {
 
     for (let i = 0; i < objPayload.length; i++) {
       if (objPayload[8] > 0) {
-        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `BTCUSD <br> ${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`)
+        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `<span class="stock-title">BTCUSD</span> <br> ${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-increase">(${Math.floor(objPayload[8] * 100) / 100}%)&uarr;</span>`)
       } else {
-        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `BTCUSD <br> ${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`)
+        return document.querySelector('#app3').insertAdjacentHTML("afterbegin", `<span class="stock-title">BTCUSD</span> <br> ${Math.floor(objPayload[4] * 100) / 100} <span class="header-primary__main-decrease">(${Math.floor(objPayload[8] * 100) / 100}%)&darr;</span>`)
       }
     }
   }).catch(error => {
     console.log(error)
   });
 }
+
 
 fetchData1();
 fetchData2();

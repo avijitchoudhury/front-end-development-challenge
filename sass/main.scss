@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+.stock-title:after {
+  content: "";
+  border-bottom: 0.5px gray solid;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 6px;
+}
 
 .header {
   display: flex;
@@ -28,15 +36,18 @@ body {
     margin-right: 10px;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
+    overflow: hidden;
 
     &__main {
       text-align: center;
-      padding: 1.5rem;
+      padding-right: 1.5rem;
 
       &-increase {
         color: green;
       }
       &-decrease {
+        display: inline;
         color: red;
       }
     }
