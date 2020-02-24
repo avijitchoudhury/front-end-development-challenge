@@ -4,21 +4,21 @@
 <section class="section-form">
     <h3 class="section-form__heading">Subscribe to our mailing list to stay up to date on Mortgage Rates</h3>
 
-    <form name="subscribe" id="subscribe" class="section-form__main">
+    <form name="subscribe" id="subscribe" class="section-form__main" autocomplete="off">
         <div class="section-form__firstName">
-            <label for="firstName">First Name</label><br>
-            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+            <label for="firstName" class="section-form__label">First Name</label><br>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name" class="section-form__input" required>
         </div>
         <div class="section-form__lastName">
-            <label for="LastName">Last Name</label><br>
-            <input type="text" name="LastName" id="LastName" placeholder="Last Name">
+            <label for="LastName" class="section-form__label">Last Name</label><br>
+            <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="section-form__input" required>
         </div>
         <div class="section-form__email">
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <label for="email" class="section-form__label">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Email" class="section-form__input" required>
         </div>
         <div class="section-form__homeOwner">
-            <label for="text">Are you a Home Owner?</label>
+            <label for="text" class="section-form__label">Are you a Home Owner?</label><br>
             <input type="radio" id="homeOwnerYes" name="homeowner" value="yes">
             <label for="homeOwnerYes">Yes</label>
             <input type="radio" id="homeOwnerNo" name="homeowner" value="no">
@@ -34,7 +34,7 @@
             </select>
         </div>
         <div class="section-form__btn">
-        <button type="submit" id="submit">Subscribe</button>
+        <button type="submit" class="section-form__btn-submit">Subscribe</button>
         </div>
     </form>
 </section>

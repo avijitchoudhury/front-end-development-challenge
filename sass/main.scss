@@ -1,5 +1,7 @@
 $color-black: black;
-$color-white: white;
+$color-white: #fff;
+$color-secondary: #55c57a;
+$color-primary: rgba(216,233,240, 1);
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
@@ -7,6 +9,14 @@ $global-sizing: 1.2rem;
 
 body {
   margin: 0 !important; 
+}
+
+*,
+*::after, 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 //header
 .stock-title:after {
@@ -27,7 +37,7 @@ body {
   z-index: 100;
   height: 6rem;
   font-size: $global-sizing;
-  background-color: rgba(220, 198, 224, 1);
+  background-color: $color-primary;
   box-shadow: 0 2px 2px 2px lightgray;
 
   &__logo-box {
@@ -49,6 +59,7 @@ body {
 
       &-increase {
         color: green;
+        text-align: center;
       }
       &-decrease {
         display: inline;
@@ -56,6 +67,17 @@ body {
       }
     }
   }
+}
+
+#app1, #app2, #app3 {
+  transition: all .2s;
+}
+
+#app1:hover, #app2:hover, #app3:hover {
+  background-color:white;
+  padding: 0.8rem;
+  margin: 0.4rem;
+  border-radius: 4px;
 }
 
 
@@ -68,7 +90,7 @@ body {
    .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     float: right;
-    margin-top: 7.5rem;
+    margin-top: 3rem;
   }
 
   .col-2-of-3 {
@@ -81,17 +103,23 @@ body {
 .object {
   position: fixed;
   height: 100%;
+  width: 30rem;
 }
 
 .section-form {
   display: flex;
   flex-flow: column;
   padding-bottom: $global-sizing;
-  border: 1px solid black;
+  // border: .2px solid black;
   background-image: url(../assets/img/flower.jpg);
+  background-size: cover;
+  height: 75%;
+  border-radius: 6px;
 
   &__heading {
     text-align: center;
+    margin: 60px 40px 0 40px;
+    text-transform: uppercase;
   }
 
   &__main {
@@ -121,10 +149,93 @@ body {
 
     & select {
       margin-top: $global-sizing;
+      width: 80%;
+      padding: .5rem 1rem;
+      border-radius: 3px;
+      background-color: rgba($color-white, .6); 
+      border: none;
+      height: 20px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 
   &__btn {
     margin-top: $global-sizing;
+    text-align: center;
+
+    &-submit {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: 5rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+    
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+      transform: translateY(-.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, .2);
+      color: rgba(102, 2, 73, .8);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+    }
+  }
+  }
+  &__input {
+    width: 80%;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    background-color: rgba($color-white, .8); 
+    border-bottom: 3px solid transparent;
+    border: none;
+    margin-top: 10px;
+
+    &:focus {
+     outline: none;
+     box-shadow: 0 1rem 2rem rgba($color-black, .1);
+     border-bottom: 3px solid $color-secondary;
+   }
+
+   &:focus:invalid {
+     border-bottom: 3px solid red; 
+     transition: all .1s;
+   }
+  }
+}
+
+
+
+//article
+.article {
+  margin-left: 30px;
+  text-align: center;
+  
+  &--text:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &--text{
+    box-shadow: 0 0 .5rem .5rem rgba($color-black, .1);
+    padding: 10px 10px 20px 10px;  
+    transition: all .2s;
+
+
+    &__header {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
