@@ -46,9 +46,11 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3);
     float: right;
-    margin-top: 12rem; }
+    margin-top: 7.5rem; }
   .row .col-2-of-3 {
-    width: calc(2* ((100% - 2 * 6rem) / 3) + 6rem); }
+    height: 100%;
+    width: calc(2* ((100% - 2 * 6rem) / 3) + 6rem);
+    margin-top: 7rem; }
 
 .object {
   position: fixed;
@@ -57,14 +59,26 @@ body {
 .section-form {
   display: flex;
   flex-flow: column;
-  padding-bottom: 1.2rem; }
+  padding-bottom: 1.2rem;
+  border: 1px solid black;
+  background-image: url(../assets/img/flower.jpg); }
+  .section-form__heading {
+    text-align: center; }
   .section-form__main {
     height: 100%;
-    text-align: center;
+    text-align: left;
+    margin-left: 1rem; }
+  .section-form__firstName {
     margin-top: 1.2rem; }
-    .section-form__main__firstName {
+  .section-form__lastName {
+    margin-top: 1.2rem; }
+  .section-form__email {
+    margin-top: 1.2rem; }
+  .section-form__homeOwner {
+    margin-top: 1.2rem; }
+  .section-form__buyWhen {
+    margin-top: 1.2rem; }
+    .section-form__buyWhen select {
       margin-top: 1.2rem; }
-    .section-form__main__lastName {
-      margin-top: 1.2rem; }
-    .section-form__main__email {
-      margin-top: 1.2rem; }
+  .section-form__btn {
+    margin-top: 1.2rem; }

@@ -3,7 +3,7 @@ $color-white: white;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
-
+$global-sizing: 1.2rem;
 
 body {
   margin: 0 !important; 
@@ -26,7 +26,7 @@ body {
   top: 0;
   z-index: 100;
   height: 6rem;
-  font-size: 1.2rem;
+  font-size: $global-sizing;
   background-color: rgba(220, 198, 224, 1);
   box-shadow: 0 2px 2px 2px lightgray;
 
@@ -68,11 +68,13 @@ body {
    .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     float: right;
-    margin-top: 12rem;
+    margin-top: 7.5rem;
   }
 
   .col-2-of-3 {
+    height: 100%;
     width: calc(2* ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    margin-top: 7rem;
   }
 }
 
@@ -84,24 +86,45 @@ body {
 .section-form {
   display: flex;
   flex-flow: column;
-  padding-bottom: 1.2rem;
+  padding-bottom: $global-sizing;
+  border: 1px solid black;
+  background-image: url(../assets/img/flower.jpg);
+
+  &__heading {
+    text-align: center;
+  }
 
   &__main {
     height: 100%;
-    text-align: center;
-    margin-top: 1.2rem;
+    text-align: left;
+    margin-left: 1rem;
+  }
 
-    &__firstName{
-    margin-top: 1.2rem;
+   &__firstName{
+    margin-top: $global-sizing;
   }
 
   &__lastName {
-    margin-top: 1.2rem;
+    margin-top: $global-sizing;
   }
 
   &__email {
-    margin-top: 1.2rem;
-  }
+    margin-top: $global-sizing;
   }
 
+  &__homeOwner {
+    margin-top: $global-sizing;
+  }
+
+  &__buyWhen {
+    margin-top: $global-sizing;
+
+    & select {
+      margin-top: $global-sizing;
+    }
+  }
+
+  &__btn {
+    margin-top: $global-sizing;
+  }
 }
