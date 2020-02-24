@@ -1,5 +1,5 @@
 body {
-  margin: 0; }
+  margin: 0 !important; }
 
 .stock-title:after {
   content: "";
@@ -14,6 +14,7 @@ body {
   width: 100%;
   margin: 0;
   position: fixed;
+  top: 0;
   z-index: 100;
   height: 6rem;
   font-size: 1.2rem;
@@ -28,8 +29,7 @@ body {
     margin-right: 10px;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    overflow: hidden; }
+    padding: 20px 0; }
     .header-primary__main {
       text-align: center;
       padding-right: 1.5rem; }
@@ -38,3 +38,33 @@ body {
       .header-primary__main-decrease {
         display: inline;
         color: red; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 8rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+    float: right;
+    margin-top: 12rem; }
+  .row .col-2-of-3 {
+    width: calc(2* ((100% - 2 * 6rem) / 3) + 6rem); }
+
+.object {
+  position: fixed;
+  height: 100%; }
+
+.section-form {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 1.2rem; }
+  .section-form__main {
+    height: 100%;
+    text-align: center;
+    margin-top: 1.2rem; }
+    .section-form__main__firstName {
+      margin-top: 1.2rem; }
+    .section-form__main__lastName {
+      margin-top: 1.2rem; }
+    .section-form__main__email {
+      margin-top: 1.2rem; }
