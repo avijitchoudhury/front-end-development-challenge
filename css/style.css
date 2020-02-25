@@ -72,7 +72,8 @@ body {
 .object {
   position: fixed;
   height: 100%;
-  width: 30rem; }
+  width: 30rem;
+  overflow: auto; }
 
 .section-form {
   display: flex;
@@ -157,6 +158,38 @@ body {
     padding: 10px 10px 20px 10px;
     transition: all .2s; }
     .article--text__header {
+      margin-top: 10px;
       text-transform: uppercase; }
+    .article--text__paragraph {
+      margin: 30px auto; }
     .article--text:hover {
       transform: scale(1.02); }
+
+@media (min-width: 375px) {
+  html {
+    width: 375px; }
+  .header {
+    display: flex;
+    flex-flow: column;
+    font-size: .8rem;
+    width: 375px;
+    overflow: hidden; }
+    .header-primary {
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+      .header-primary__main {
+        padding: 0; }
+  .row {
+    display: flex;
+    flex-flow: column-reverse; }
+    .row .col-1-of-3 {
+      width: 100%; }
+    .row .col-2-of-3 {
+      width: 100%;
+      margin-top: 7rem; }
+  .object {
+    position: absolute;
+    height: 100%; }
+  .article--text {
+    width: 280px; } }

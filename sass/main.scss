@@ -6,6 +6,8 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 $global-sizing: 1.2rem;
+$breakpoint-tablet: 375px;
+
 
 body {
   margin: 0 !important; 
@@ -104,6 +106,7 @@ body {
   position: fixed;
   height: 100%;
   width: 30rem;
+  overflow: auto;
 }
 
 .section-form {
@@ -229,13 +232,70 @@ body {
     padding: 10px 10px 20px 10px;  
     transition: all .2s;
 
-
+    
     &__header {
+      margin-top: 10px;
       text-transform: uppercase;
     }
+    
+    &__paragraph {
+       margin: 30px auto;
+     }
 
     &:hover {
       transform: scale(1.02);
     }
   }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  html {
+    width: 375px;
+  }
+  
+  .header {
+    display: flex;
+    flex-flow: column;
+    font-size: .8rem;
+    width: 375px;
+    overflow: hidden;
+
+ 
+    &-primary {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+ 
+      &__main {
+        padding: 0;
+      }
+    }
+  }
+
+ //Main body
+  .row {
+    display: flex;
+    flex-flow: column-reverse;
+
+   .col-1-of-3 {
+    width: 100%;
+  }
+
+  .col-2-of-3 {
+    width: 100%;
+    margin-top: 7rem;
+    }
+  }
+  .object {
+    position: absolute;
+    height: 100%;
+  }
+  
+  .article {
+
+    &--text {
+      width: 280px;
+    }
+  }
+
 }
