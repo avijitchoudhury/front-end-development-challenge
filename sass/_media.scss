@@ -1,0 +1,66 @@
+@media (max-width: $breakpoint-tablet) {
+  html {
+    width: $breakpoint-tablet;
+  }  
+
+  .header {
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    font-size: .8rem;
+    width: $breakpoint-tablet;
+    
+
+    &__logo-box {
+      display: flex;
+      justify-content: center;
+      margin: 5px auto;
+    }
+
+    &-primary {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+ 
+      &__main {
+        padding: 0;
+      }
+    }
+  }
+
+
+ //Main body
+  .row {
+    display: flex;
+    flex-flow: column-reverse;
+
+   .col-1-of-3 {
+    width: 100%;
+  }
+
+  .col-2-of-3 {
+    width: 100%;
+    margin-top: 7rem;
+    }
+  }
+  .object {
+    position: absolute;
+    width: $breakpoint-tablet;
+  }
+  
+  .article {
+ 
+    &--text {
+      width: 280px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .section-form {
+    margin-right: 4rem;
+  }
+  .col-1-of-3 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+//header
+.stock-title:after {
+  content: "";
+  border-bottom: 0.5px gray solid;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 6px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 6rem;
+  font-size: $global-sizing;
+  background-color: $color-primary;
+  box-shadow: 0 2px 2px 2px lightgray;
+
+  &__logo-box {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  &-primary {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    &__main {
+      text-align: center;
+      padding-right: 1.5rem;
+
+      &-increase {
+        color: green;
+        text-align: center;
+      }
+      &-decrease {
+        display: inline;
+        color: red;
+      }
+    }
+  }
+}
+
+#app1, #app2, #app3 {
+  transition: all .2s;
+}
+
+#app1:hover, #app2:hover, #app3:hover {
+  background-color:$color-white;
+  padding: 0.8rem;
+  margin: 0.4rem;
+  border-radius: 4px;
+}

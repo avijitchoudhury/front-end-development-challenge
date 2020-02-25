@@ -1,0 +1,133 @@
+// form
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  margin-bottom: $gutter-vertical;
+
+   .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    float: right;
+    margin-top: 3rem;
+  }
+
+  .col-2-of-3 {
+    height: 100%;
+    width: calc(2* ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    margin-top: 7rem;
+  }
+}
+
+.object {
+  position: fixed;
+  height: 100%;
+  width: 30rem;
+  overflow: auto;
+  margin-right: 30px;
+}
+
+.section-form {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: $global-sizing;
+  background-image: url(../assets/img/flower.jpg);
+  background-size: cover;
+  height: 75%;
+  border-radius: 6px;
+  margin-right: 60px;
+
+  &__heading {
+    text-align: center;
+    margin: 60px 40px 0 40px;
+    text-transform: uppercase;
+  }
+
+  &__main {
+    height: 100%;
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+   &__firstName{
+    margin-top: $global-sizing;
+  }
+
+  &__lastName {
+    margin-top: $global-sizing;
+  }
+
+  &__email {
+    margin-top: $global-sizing;
+  }
+
+  &__homeOwner {
+    margin-top: $global-sizing;
+  }
+
+  &__buyWhen {
+    margin-top: $global-sizing;
+
+    & select {
+      margin-top: $global-sizing;
+      width: 80%;
+      padding: .5rem 1rem;
+      border-radius: 3px;
+      background-color: rgba($color-white, .6); 
+      border: none;
+      height: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: $global-sizing;
+    text-align: center;
+
+    &-submit {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: 5rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+    
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+      transform: translateY(-.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, .2);
+      color: rgba(102, 2, 73, .8);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+    }
+  }
+  }
+  &__input {
+    width: 80%;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    background-color: rgba($color-white, .8); 
+    border-bottom: 3px solid transparent;
+    border: none;
+    margin-top: 10px;
+
+    &:focus {
+     outline: none;
+     box-shadow: 0 1rem 2rem rgba($color-black, .1);
+     border-bottom: 3px solid $color-secondary;
+   }
+
+   &:focus:invalid {
+     border-bottom: 3px solid red; 
+     transition: all .1s;
+   }
+  }
+}
